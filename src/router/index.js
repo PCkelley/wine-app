@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import AddWinePage from '../views/AddWinePage.vue';
 import ReviewWinePage from '../views/ReviewWinePage.vue';
+import ViewWinePage from '../views/ViewWinePage.vue';
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,10 @@ const routes = [
     path: '/home',
     name: 'home',
     component: Home,
+    meta: {
+      navName: 'Home',
+      requiresAuth: true,
+    },
   },
   {
     path: '/addWinePage',
@@ -27,6 +32,11 @@ const routes = [
     path: '/reviewWinePage',
     name: 'review-wine-page',
     component: ReviewWinePage,
+  },
+  {
+    path: '/viewWinePage',
+    name: 'view-wine-page/:winedId',
+    component: ViewWinePage,
   },
   {
     path: '/about',

@@ -2,12 +2,14 @@ import Vue from 'vue';
 import firebase from 'firebase';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import VueApexCharts from 'vue-apexcharts';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
-Vue.use(Buefy);
+Vue.use(Buefy, VueApexCharts);
+Vue.component('apexchart', VueApexCharts);
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBZDWDDGKC0n1S9Ibac7si9JN8QTpMHgSU',

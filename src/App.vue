@@ -1,6 +1,6 @@
 <template lang='pug'>
   #app
-    b-navbar.purple-bg
+    nav-bar
     router-view
   //- <div id="app">
   //-   <div id="nav">
@@ -10,7 +10,15 @@
   //-   <router-view/>
   //- </div>
 </template>
+<script>
+import NavBar from '@/components/NavBar.vue';
 
+export default {
+  components: {
+    NavBar,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
